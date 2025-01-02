@@ -1,0 +1,15 @@
+[project]
+name = "evernote-migration"
+version = "0.1.0"
+description = "A tool used to help you in the migration of notes exported from Evernote"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+license = { text = "MIT" }
+authors = [
+    { name = "Michel Caradec" }
+]
+keywords = ["Evernote", "Markdown", "GitHub"]
+
+[project.urls]
+"Homepage" = "https://github.com/michelcaradec/evernote-migration"

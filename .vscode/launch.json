@@ -1,0 +1,71 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "Migrate",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "./src/main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "migrate",
+                "--folder",
+                "notebooks/notes-inbox",
+                "--keep",
+                "--overwrite",
+                "--report",
+                "report.csv",
+                // "--report-only",
+                "--evernote-db",
+                "/Users/caradec/Library/Application Support/Evernote/conduit-storage/https%3A%2F%2Fwww.evernote.com/UDB-User1787821+RemoteGraph.sql",
+            ],
+            "env": {
+                "PYTHONPATH": ".",
+            },
+        },
+        {
+            "name": "Move (filter)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "./src/main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "move",
+                "--folder",
+                "notebooks/notes-inbox",
+                "--dest",
+                "notebooks/notes-inbox-hot",
+                "--date-updated",
+                "2024-01-01",
+                "--report",
+                "notes-inbox.csv",
+            ],
+            "env": {
+                "PYTHONPATH": ".",
+            },
+        },
+        {
+            "name": "Move (no filter - remaining notes)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "./src/main.py",
+            "console": "integratedTerminal",
+            "args": [
+                "move",
+                "--folder",
+                "notebooks/notes-inbox",
+                "--dest",
+                "notebooks/notes-inbox-cold",
+                "--report",
+                "notes-inbox.csv",
+            ],
+            "env": {
+                "PYTHONPATH": ".",
+            },
+        }
+    ]
+}

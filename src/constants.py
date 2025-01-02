@@ -1,0 +1,2 @@
+ATTACHMENTS_FOLDER = '.attachments'
+NOTE_EXTENSION = '.md'

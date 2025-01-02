@@ -1,0 +1,32 @@
+{
+    "version": 1,
+    "loggers": {
+        "standard": {
+            "level": "INFO",
+            "handlers": [
+                "console",
+                "file"
+            ],
+            "propagate": "no"
+        }
+    },
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+            "level": "WARNING",
+            "formatter": "simple",
+            "stream": "ext://sys.stdout"
+        },
+        "file": {
+            "class": "logging.FileHandler",
+            "level": "INFO",
+            "formatter": "simple",
+            "filename": "logs/evernote-migration.log"
+        }
+    },
+    "formatters": {
+        "simple": {
+            "format": "%(asctime)s - %(levelname)s - %(message)s"
+        }
+    }
+}
